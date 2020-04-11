@@ -17,9 +17,14 @@ With Burst disabled the tests are about 10x slower.
 ## Stability
 The only tests test for performance so there's no real test coverage. I'm sure there's edge cases that are not caught. I would highly recommend writing more tests if you're planning to use the code in production.
 
+## Query debug view
+There's a very simple debug drawer that visualizes nodes and query hits. Example below is of a 200x1000x200 AABB.
+<p align="center">
+<img src="media/verticalquery.gif" width="500"/></br
+</p>
+
 ## Potential future work / missing features
 - Unit tests
 - Support for basic shapes
 - Other types of queries, such as raycasts
 - Support individual adding and removing of elements
-- Extend to octree (3d support)
