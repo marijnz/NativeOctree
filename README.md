@@ -7,10 +7,10 @@ An Octree Native Collection for Unity DOTS. It's ported from https://github.com/
 - The bulk insertion is using morton codes. This allows very fast bulk insertion but causes an increasing (minor) overhead with an increased depth
 
 ## Performance
-There's some very rudimentary performance tests included. With 20k elements on a 2k x 2k x 2k map, a max depth of 6 and 16 max elements per leaf. Burst enabled, ran on main thread on my i7-7700K CPU @ 4.20GHz:</br>
+There's some very rudimentary performance tests included. With 20k elements on a 2000x2000x2000m map, a max depth of 6 and 16 max elements per leaf. Burst enabled, ran on main thread on my i7-7700K CPU @ 4.20GHz:</br>
 
 - Job: Bulk insertion of all elements - Takes ~1ms
-- Job: 1k queries on a 200m by 200m range - Takes ~2.7ms
+- Job: 1k queries on a 200x200x200m range - Takes ~2.7ms
 
 With Burst disabled the tests are about 10x slower.
 
@@ -18,7 +18,7 @@ With Burst disabled the tests are about 10x slower.
 The only tests test for performance so there's no real test coverage. I'm sure there's edge cases that are not caught. I would highly recommend writing more tests if you're planning to use the code in production.
 
 ## Query debug view
-There's a very simple debug drawer that visualizes nodes and query hits. Example below is of a 200x1000x200 AABB.
+There's a very simple debug drawer that visualizes nodes and query hits. Example below is of a 200x1000x200m AABB.
 <p align="center">
 <img src="media/verticalquery.gif" width="500"/></br
 </p>
