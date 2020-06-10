@@ -31,10 +31,12 @@ namespace NativeOctree
 	/// </summary>
 	public unsafe partial struct NativeOctree<T> : IDisposable where T : unmanaged
 	{
+#if ENABLE_UNITY_COLLECTIONS_CHECKS
 		// Safety
 		AtomicSafetyHandle safetyHandle;
 		[NativeSetClassTypeToNullOnSchedule]
 		DisposeSentinel disposeSentinel;
+#endif
 
 		// Data
 		[NativeDisableUnsafePtrRestriction]
